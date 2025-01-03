@@ -1,18 +1,8 @@
-function adicionar(produto){
+function alterarQtd(produto, acao){
     const qtd = document.getElementById('qtd_' + produto)
     const valor = document.getElementById('valor_' + produto)
     const total = document.getElementById('total_' + produto)
 
-    qtd.innerHTML++
-    total.innerHTML = qtd.innerHTML * valor.innerHTML
-
-}
-
-function retirar(produto){
-    const qtd = document.getElementById('qtd_' + produto)
-    const valor = document.getElementById('valor_' + produto)
-    const total = document.getElementById('total_' + produto)    
-
-    qtd.innerHTML--
+    acao == '+' ? qtd.innerHTML++ : qtd.innerHTML--
     total.innerHTML = qtd.innerHTML * valor.innerHTML
 }
