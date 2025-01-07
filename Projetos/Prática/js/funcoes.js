@@ -9,3 +9,11 @@ function alterarQtd(produto, acao){
         acao == '+' ? qtd.innerHTML++ : qtd.innerHTML--
         total.innerHTML = qtd.innerHTML * valor.innerHTML
     }
+}
+
+function soma(){
+    let soma = 0
+    soma += document.getElementById('Total_1')    
+    soma = soma + document.getElementById('Total_2')
+    soma = soma + document.getElementById('Total_3')
+}
