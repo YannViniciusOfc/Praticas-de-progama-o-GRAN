@@ -8,12 +8,16 @@ function alterarQtd(produto, acao){
     } else {
         acao == '+' ? qtd.innerHTML++ : qtd.innerHTML--
         total.innerHTML = qtd.innerHTML * valor.innerHTML
+        soma()
     }
 }
 
 function soma(){
     let soma = 0
-    soma += document.getElementById('Total_1')    
-    soma = soma + document.getElementById('Total_2')
-    soma = soma + document.getElementById('Total_3')
+
+    soma += Number(document.getElementById('total_1').innerHTML)    
+    soma += Number(document.getElementById('total_2').innerHTML)
+    soma += Number(document.getElementById('total_3').innerHTML)
+
+    document.getElementById('subtotal').innerHTML = soma
 }
